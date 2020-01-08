@@ -1,4 +1,4 @@
-# NVIDIA-Isaac-codelets
+# NVIDIA-isaac-codelets
 Additional codelets not presented within the tutorial
 
 ## How to use
