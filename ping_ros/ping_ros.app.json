@@ -1,0 +1,40 @@
+{
+  "name": "ping_ros",
+  "modules": [
+    "ping_ros:ping_components"
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "name": "ping_node",
+        "components": [
+          {
+            "name": "ping_component",
+            "type": "Ping"
+          },
+          {
+            "name": "message_ledger",
+            "type": "isaac::alice::MessageLedger"
+          }
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "config": {
+    "ping_node" : {
+      "ping_component" : {
+        "tick_period" : "1Hz",
+         "subscriber_channel_name" : "chatter"
+      }
+    },
+    "websight": {
+      "WebsightServer": {
+        "port": 3000,
+        "ui_config": {
+          "windows": {}
+        }
+      }
+    }
+  }
+}
